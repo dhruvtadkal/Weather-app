@@ -10,6 +10,7 @@ const prompt = require('prompt-sync')()         //include when using prompt for 
 // console.log(path.join(__dirname,'../public'))
 
 const app = express()
+const port = process.env.PORT || 3000           //this is required for heroku to run the app(not locally)
 
 //paths for express config
 const publicDirectoryPath = path.join(__dirname,'../public')
@@ -89,6 +90,6 @@ app.get('/products',(req,res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('server is running on port 3000')
+app.listen(port, () => {
+    console.log('server is running on port ' + port)
 })
