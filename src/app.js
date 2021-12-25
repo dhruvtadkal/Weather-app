@@ -42,6 +42,13 @@ app.get('/login', (req,res) => {
     })
 })
 
+app.get('/about', (req,res) => {
+    res.render('about',{
+        title: 'About Page',
+        name: 'Dhruv'
+    })
+})
+
 // app.get('/login', (req,res) => {
 //     res.send('Login page')
 // })
